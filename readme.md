@@ -1324,6 +1324,8 @@ const fn = () =>  console.log(this)
 
 const fn1 = fn.bind({something:true})
 
+.net 
+you have tasked with migrating a substatial VB 6.0 application to VB .net how would you approch this migration to  ensure minimal disruption and maintain functionality
 
 javascript
 Promise.reject()
@@ -1555,9 +1557,9 @@ output> h-e-l-l-o
 
 
 javascript 
-remove duplicatr from the array
+remove duplicate from the array
 input = [2,1,2,3,1,2,3]
-output = [1,2,2,3,1,1,4,4,11,1]
+output = [1,2,3]
 
 React
 create a todo list in ui without any functionality
@@ -1654,6 +1656,19 @@ python
 design a class to calculate area of shape 
 it can square, rect or circle
 
+Javascript 
+the code recusive code will cause a stack overflow of the array list is too large
+how can you fix this still retain the recusive pattern
+
+var list = readHugeList()
+var nextListItem = function(){
+    var item = list.pop()
+    if(item){
+        //process the list
+        nextListItem()
+    }
+}
+
 
 
 
@@ -1662,6 +1677,7 @@ HTML
 
 
 CSS 
+>> in which case we should use translate insted of absolute positing in css
 >> How to make div in center 
 .centered {
     margin-left: auto;
@@ -1765,3 +1781,116 @@ Use of mergeMap and concatMap
 (coding)
 https://jsonplaceholder.typicode.com/posts
 call api in angular service using observable
+
+
+python
+def abc(x):
+    x = 10
+
+y = 5
+abc(y)
+print(f"y = {y}")
+
+
+
+def abc(x):
+    x += [10]
+
+y = [5]
+abc(y)
+print(f"y = {y}")
+
+def abc(x):
+    x = [10]
+
+y = [5]
+abc(y)
+print(f"y = {y}")
+
+
+
+def abc(max):
+      count = 1
+      while count <= max:
+        yield count
+        count += 1
+        
+out = abc(5)
+print(next(out))
+print(next(out))
+print(list(out))
+
+
+a = [[1,2,3],[4,5,6],[7,8,9]]
+out = [[row[i] for row in a] for i in range(len(a[0]))] 
+print(out)
+
+
+you are given an array customers where customers[i] = [arrrival,time]
+arrival > is the time of the customer. The arrival times are sorted in non-decreasing order.
+time > is the time needed to prepare the order of the ith customer
+
+when a customer arrives he give the chef his order and the chef start preparing it once he is idle
+the customer wait till the chef finesh preparing the oder
+the ched does not prepare food for more than one xustomer at a time
+the chef prepare food foe the custome rin order they input
+
+retunr the avergae wiaiting time of all customer solution with 10^-5 from the actual answer are
+considered acceptrd
+
+ex1
+input [[5,2],[5,4],[10,3],[20,1]]
+output> 3.25000
+
+ex2
+input [[1,2],[2,5],[4,3]]
+output> 5.0000
+
+
+
+Javascript
+var a = (function(x){
+    delete x;
+    return x;
+}(0))
+
+console.log(a)
+
+//output> 0
+
+
+
+/////
+Caching
+
+> What is the use of in-memory caching in application
+> Implement a simple logic with nodejs+mongodb+redis for get api
+
+graphql
+> What is GraphQL, and how does it differ from REST?
+> What is a GraphQL query, and how does it differ from a mutation?
+> Can you explain the concept of "schema stitching" in GraphQL?
+
+Jenkins
+> how are you using jenkins in your app and what are the different stages you have
+> Can you write simple jenkins file with pull, build and deploy stages
+
+MySql
+> Create a query in MySql for student and marks table  to find top five student on basis of marks
+where both table have releation ship of rollNo
+( if done above)
+> Please save above output in view
+
+
+Serverless Architecture
+> What id a usecase of lambda in your application
+> what are the limitation on lambda
+> How you are exposing lambda function
+    Ans > Api gateway
+
+MongoDB
+> How does mongodb scale the database 
+ans > horizonatly
+> What is the concept of sharing
+> What happen if we have even number of shared in election when one shared down
+ans > add arbitrary node
