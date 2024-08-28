@@ -1894,3 +1894,414 @@ ans > horizonatly
 > What is the concept of sharing
 > What happen if we have even number of shared in election when one shared down
 ans > add arbitrary node
+> > How do you insert a document into a MongoDB collection?
+> How do you perform aggregation in MongoDB?
+    Discuss using the aggregate method and 
+    common stages like $match, $group, $sort, and $project:
+> How do you perform text search in MongoDB?
+    db.myCollection.createIndex({ description: 'text' });
+   db.myCollection.find({ $text: { $search: 'keyword' } });
+> best practices for managing MongoDB performance and reliability?
+     monitoring with tools such as MongoDB Atlas, 
+     sharding for large datasets, 
+     indexing for query optimization
+     backups for data recovery.
+
+
+React >>
+>> manage state in a React application
+Local Component State: Using useState or this.state in class components.
+Context API: For global state management.
+State Management Libraries: Such as Redux or Zustand for more complex state nee
+>> How do you optimize performance in React applications?
+    Memoization: Using React.memo and useMemo to prevent unnecessary re-renders.
+Code Splitting: Lazy loading components with React.lazy and Suspense.
+Avoiding Inline Functions: Creating functions outside of render methods to prevent re-creation on each render.
+Virtualization: Using libraries like react-window or react-virtualized for rendering large lists efficiently.
+
+
+golang
+step1
+4,7,12,19,28,.......200
+(generate this screen in golang)
+
+step2
+generate square for odd number
+
+step3
+add the square to the mat and calculate the total area occuiped
+
+all three step should have parallel and in finally 
+
+
+package main
+
+type ( 
+    Shape interface {
+    getArea() float64
+    }
+
+    Square struct{
+        side float64
+    }
+
+    Mat struct{
+        shapes []Shape
+    }
+
+    tPlaceCh chan Shape
+
+
+)
+
+func (s *Square) getArea() float64{
+    return s.side * s.side
+}
+
+func (m  *Mat) getAreaOccupied() (result float64){
+    for _, shape := range m.shapes{
+        result += shape.getArea()
+    }
+    return
+}
+
+func (m *Mat) place(shape Shape){
+    m.shapes = append(m.shapes, shape)
+}
+
+
+nodejs
+const qs = require('querystring').parse('foo=bar&abc=xyz&abc=123')
+
+how can we access value 123
+
+option 
+1) qs['abc']['abc']
+2) qs[0]['abc']
+3) qs['abc'][1]
+4) qs['abc']  > correct
+
+mongodb
+what is the principle implication of using bulk write operation in MongoDb
+1) decreasing performance
+2) Increased throughput  >> correct
+3) Increased data quality
+4) increases network traffic
+
+nodejs execute event loop starting from newwst first
+
+microservice nodejs
+what happen to deployed microservice when you use the 'service instance per container' deployment pattern
+
+1) they become isolated
+2) they share resource
+3) they become difficult to scale up or down
+4) they are inrestricted in terms of cpu/memory consumption
+
+nodejs
+which npm command prints all local packages that need updating
+ans > npm outdated
+
+nodejs
+how can you modify node's global module search path
+ans> set NODE_PATH=C:\path\to\your\global\modules
+
+Javascript
+similar strings
+two strings are said to be similiar if they are composed of the same character
+example "abaca" and "cba" are similiar since both of them composed of character 
+'a','b','c'
+but 'abaca' and 'bcd' are not similiar
+
+given an array of string words of length n, find the number of pairs of string that are 
+similiar
+
+example
+n =3 , words=['xyz','foo','of']
+answer = 1
+
+create function countSimilarPairs(word){
+
+}
+
+
+golang
+implement function to merge two sorted link list as
+new sorted linklist
+
+
+golang
+we need to refeactor large if statement
+using polyomormisum
+
+
+golang
+we need to start http server and define handler and respond with myname
+
+
+golang
+we need to print number from 1 to 10
+one go routine will print odd and one even
+and print output in correct order
+
+goalng
+given three array soretd in non-decreasing order
+print all comman element in these array
+
+input 
+arr1[]= {1,5,10,20,40,80}
+arr2[] = {6,7,20,80,100}
+arr3[] = {3,4,15,20,70,80,120}
+output = 20 ,80
+
+python 
+
+React
+Cretae todoList user able to add edit and complete and
+
+React
+the application has 2 component
+file > contains input box and filelist component
+fillist > display the list of files and filders an let user add 
+more files
+
+intial Data:
+{
+    name:src,
+    isOpen:true,
+    files:[
+        {
+            "name":"App.js"
+        },
+        {
+            name:"component",
+            "isOpen":false,
+            "files":[{name:"File.js"}]
+        }
+    ]
+}
+
+requirent
+1) inital component should display file folder structure
+accorsing to the given intial data
+
+2) there should be + button at the end of every folder
+3) clicking a folder shoudl toggle its expansion and chnage the + sign to - sign
+on expansion and vice versa
+4) clicking a file should do nothing if it does not contain file or a folder
+5) Double -clicking a files should make it a folder
+6)clicking + button 
+a) should take afile name from the input box, add it to the require folder and reset
+the input box
+b) shoudl if thr input box is empty display an alert saying " Please enter file name"
+
+
+Note: Each item in the list is <li> tag with two items <button> which conatin a <span>
+for display + and - and a <ul> for displaying its sub file/folder if any
+
+
+JavaScript
+function test(){
+    var a = 'a'
+    (function(){
+        console.log(a)
+        return;
+        var a = 'b'
+    })()
+}
+
+{
+    company:'HCL',
+    address:"Noida",
+    "techno":{
+        "ui":"opo",
+        "java":"asd",
+        "subtechno":{
+            html:"abc",
+            css:"frv"
+        }
+    }
+}
+
+output{
+    company:'HCL',
+    address:"Noida",
+    "techno_ui":"opo",
+    "techno_java":"asd"
+    "techno_subtechno_html":"abc",
+    "techno_subtechno_css":"frv"
+}
+
+
+golang
+ping pong app with go routine and gochannel
+
+golang we have connection pool for db clinet
+once we get request we fetch client from pool fetch and response
+design code for this create dummy client
+intilize quantity and max quantiy
+if no client available go to max and if go max close
+
+
+array return most repeated item in an array
+const nested = [2,'A',2,['A',4,['A',6,['A',8]]]]
+
+
+React
+A list of clor composed of red and green elements
+A "square" component that render a square of a given clor and 
+execute a click method
+
+implenment a parent component named "App"  that:
+1. Uses the give square component  to render all square from the "color" list
+2. Expose the following functionallity
+a> Click green => change current element to "red" + add 1 "new "green"
+element at the end of the list
+b> click red > delete current elemement
+
+react
+react component implemnt counyer
+
+golang
+implement a procedure and consure using gochannle 
+producer should generate sires of integr and consumner should
+recive from channel and double the integer and return and
+shut down the system gracefully
+
+python 
+write function that recive 2 interga return true f those are equal
+else false
+
+list at least 5 non-trivial test case they have to be postivr and negative
+
+python 
+write a script that gets a urls as argument
+makes a ping to the host and append the result to a file
+
+
+javascript
+we have array of object on basis of index user provide
+we need to pick value without iteration
+
+
+javascript
+use Destructuring
+we have key value pair 
+try to retrive data from a map structure from a particular index
+
+
+we have endpoint
+write react component and list down the title on order list
+https://jsonplaceholder.typicode.com/posts?_limit=10
+
+golang 
+ 
+https://gist.githubusercontent.com/pyPRO2019/dc44ae45f7cfe2f2a34fec30db4678eb/raw/df247df4e11260c669f986d0de589a90459d7e7b/students_data.csv
+read data nd find uniqure recored
+
+you are workinh on an edu game platform where iser can access and play edu game to 
+learn various subject. 
+
+Req
+1)user should have profile with the basic info like usernmae and email
+2)game have various ataribute including title, subject and dicciculty level
+3) user can play multiple games and their progres should be tracked for each game
+separatley
+4) the progress should include info like score achieved and the data of the last playthourgh
+5) user should earn achievment in games based on their in-game actions and perfomance . the 
+achievemnt info includes the achcievemnt name in addition to the date
+
+Task1
+design a complerhsive database schema to represent these entires
+(user game, progress and achievment) and establish the necesasry relation
+between them
+
+task2 sql query
+the edu game platforn has gained popularity ans there is a need to 
+showcase the top- performing
+user in each subject based on their overal achievment
+
+the challenge is ti retireve a list of user who have achieved the highest total score in 
+each subject create a query that return a list containing rhe top-performaing
+user in each subject for each subject includes user basic info(usernmae, email)
+and total score achieved
+
+
+
+task3
+y
+pagination bug fix:
+onserve that there is a bug in pagination where despoite having 16 items 
+in the list only3 pages are displayed (assume 5 per page) identify and retify
+the bug to ensure that the pagination display the correct number of pages
+
+function cretapAgination(){
+    const totalpage = Math.floor(subjectData.length/itemsPerPage)
+    const paginationContainer = docuemnt.getElementById('pagination')
+    paginationContainer.innerJTML = ''
+
+    for(let i = 1; i<=totalpages;i++){
+        const pageLink = document.createElement('li')
+        pageLink.classList.add('page-item')
+        pageLink.innerHtml = '<a class="page-link" href="#">${i}<a/>'
+
+        pageLink.addEventLisetner('click',()=>{
+            displaySubjects(i)
+            window.scrollTo(0,0)
+        })
+        paginationContainer.appendChild(pageLink)
+
+    }
+}
+
+ 
+javascript 
+create pareant and child component 
+and share data between them using context api
+
+react
+test case for counter finction
+
+vue3
+'use strict'
+console.log(b)
+var b = 10
+
+for(var i = 0;i <5;i++){
+    setTimeout(() => {
+        console.log(i)
+    },1000)
+}
+
+react
+
+javascript 
+debounce
+
+
+javascript 
+palindrome code
+
+
+
+give a json aaray of onkevt return all object that have key
+value that matches  a condition
+1. build an executable that excetur this list and return all object whose 
+birthdate contains 1990
+2. if necessary extend method to 
+return all objects who meets additional criterta favorite color = blue
+const data = [{
+    name:'Anne',
+    birthdate:'01/01/1990',
+    favcolor:'blue'
+}
+]
+
+css
+what is height of element have content 10px border 1px padding 5px and margin 10px
+
+javascript
+write code which handle this senario
+1> sum(1,2,3,.....n)
+
+2>sum(1)(2)(3)......(n)
