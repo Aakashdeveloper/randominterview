@@ -1368,6 +1368,7 @@ b()
 console.log(a)
 
 
+
 for(var i = 1;i<=5;i++){
     setTimeout(function(){console.log(i)},1000)
 }
@@ -1673,7 +1674,18 @@ var nextListItem = function(){
 
 
 HTML 
+>> What is the novalidate attribute used for in HTML forms
+>> Regex to accept only numbers 
+^\d+$
+>> How can you enhance the accessibility of application 
+>> Difference in async and defer attributes are used in the <script> tag.
+async: Downloads the script asynchronously and executes it as soon as it is ready, without blocking the HTML parsing.
+defer: Downloads the script asynchronously but defers execution until after the HTML parsing is complete.
+>> Block VS Inline 
+>> How we can allow user to open default mail 
+<a href="mailto:example@example.com">Send Email</a>
 >> 
+
 
 
 CSS 
@@ -1699,8 +1711,22 @@ CSS
     order: 2;
   }
 >> How do you combine multiple media query conditions?
->> Purpose of  and, not, and or not in Media querry
+>> Purpose of  and, not,   and or not in Media querry
 >> Breakpoints in media query
+>> Flex Container with Equal-Width Children
+.container {
+    display: flex;
+}
+.item {
+    flex: 1; /* Equal width for all items */
+    padding: 10px;
+    background-color: lightcoral;
+}
+>> Reorder Flex Items
+>> CSS to add background to even rows in list 
+li:nth-child(even) {
+    background-color: #f0f0f0;
+}
 ------------------------
 javascript
 
@@ -1717,7 +1743,7 @@ console.log(x, y); // Output: 1 2
 Output of 
 const nested = { a: [1, 2], b: { c: 3 } };
 const { a: [x, y], b: { c } } = nested;
-console.log(x, y, c); // Output: 1 2 3
+     // Output: 1 2 3
 
 
 
@@ -1777,10 +1803,32 @@ What are the subjects in angular
 Use of mergeMap and concatMap 
 >>are higher-order mapping operators that transform Observables, but they handle the emissions of inner Observables differently:
 
+>> What are some common RxJS operators?
+map: Transforms emitted values.
+filter: Filters emitted values based on a condition.
+mergeMap / flatMap: Projects each value to an Observable and merges the results.
+concatMap: Projects each value to an Observable and concatenates the results.
+switchMap: Projects each value to an Observable and switches to the latest one.
+debounceTime: Emits a value from the source Observable only after a specified delay.
+distinctUntilChanged: Emits only distinct values based on a comparison function.
+take: Emits only the first N values from the source Observable.
 
+>> Purpose of combineLatest work?
+>> How can you handle errors in RxJS?
+>> Different type of subjects 
 (coding)
 https://jsonplaceholder.typicode.com/posts
 call api in angular service using observable
+
+
+ES6  
+>>How generator function works
+>> Promise.all and Promise.race
+
+
+
+
+
 
 
 python
@@ -1865,11 +1913,23 @@ Caching
 
 > What is the use of in-memory caching in application
 > Implement a simple logic with nodejs+mongodb+redis for get api
+> difference between in-memory and distributed caching 
+>> How does Redis handle persistence?
+>> How to monitor and manage Redis performance
+>> How does Memcached handle data expiration and eviction?
+Explain the two main persistence mechanisms: 
+RDB (Redis Database Backup) and AOF (Append-Only File), and their trade-offs.
 
 graphql
 > What is GraphQL, and how does it differ from REST?
 > What is a GraphQL query, and how does it differ from a mutation?
 > Can you explain the concept of "schema stitching" in GraphQL?
+>> Role of introspection in GraphQL
+> Given a GraphQL query, write the resolver function for fetching data from a database.
+> Implement a pagination solution for a list of items using cursor-based pagination in GraphQL.
+> How do you handle file uploads in GraphQL?
+> How do you implement caching in a GraphQL server?
+
 
 Jenkins
 > how are you using jenkins in your app and what are the different stages you have
@@ -1880,6 +1940,9 @@ MySql
 where both table have releation ship of rollNo
 ( if done above)
 > Please save above output in view
+> Write a SQL command to update data through a view and handle any potential issues with view updates.
+>> Provide the SQL command for updating data and discuss any limitations or requirements.
+>> What is a materialized view, and how does it differ from a regular view?
 
 
 Serverless Architecture
@@ -1887,14 +1950,21 @@ Serverless Architecture
 > what are the limitation on lambda
 > How you are exposing lambda function
     Ans > Api gateway
+> What are the common triggers for serverless functions?
+> How do you handle authentication and authorization in a serverless environment?
+    xplain methods such as API Gateway authorizers, OAuth, JWT tokens, and integrations with identity providers.
+> How do you handle versioning and rollback in serverless functions?
+     such as using AWS Lambda versions and aliases, 
+     strategies for rolling back to previous versions if needed.
+
 
 MongoDB
 > How does mongodb scale the database 
 ans > horizonatly
-> What is the concept of sharing
-> What happen if we have even number of shared in election when one shared down
+> What is the concept of sharding
+> What happen if we have even number of Replica in election when one Replica down
 ans > add arbitrary node
-> > How do you insert a document into a MongoDB collection?
+> How do you insert a document into a MongoDB collection?
 > How do you perform aggregation in MongoDB?
     Discuss using the aggregate method and 
     common stages like $match, $group, $sort, and $project:
@@ -2284,6 +2354,11 @@ palindrome code
 
 
 
+git remote add origin https://aakashdeveloper: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@github.com/Aakashdeveloper/angular18.git
+
+https://github.com/Aakashdeveloper/angular17.git
+
+
 give a json aaray of onkevt return all object that have key
 value that matches  a condition
 1. build an executable that excetur this list and return all object whose 
@@ -2305,3 +2380,575 @@ write code which handle this senario
 1> sum(1,2,3,.....n)
 
 2>sum(1)(2)(3)......(n)
+
+react 
+make react component
+call api with async and await
+jsonsplaceholder.typicode.com/users
+
+react native
+> how to implment custome animation for user interface transition react native
+> to handle third party with react native
+> react-native how can we ensure react native app is aceesibiliy to disable perosn
+> react-native how to configure to access local db like SQL lite for offline data
+> react-native major the perforamce of app
+> react-native add feature like accesing camre
+> react native approch navigation
+
+
+python 
+
+
+angular reactive form
+design angular folder
+with field
+1> appname
+2> app description
+3> Redirect uri
+4> Gender and it have male and female
+
+and register button only enable when all value added
+
+sudoku grid validation suggest best algo with step
+determine if a 9*9 sudoku board is valid.
+Only filled cell need to be validated according to following rules:
+1.Each row must contain the digit 1-9 without repetition
+2.Each column must contain the digit 1-9 without repetition
+3.Eaxh of the nine 3*3 sub-boxes of the grid must contain the
+digits 1-9 without repetition
+
+note
+sudoku board could be valid but is not necessarily solvable
+> only filled cell need to be validated according to the 
+mention rule
+
+suggest best algo with step
+given an m * n matrix board wher each cell is a batteship 'X' or empty '.'
+return the numbe of batteship on board
+
+1>batteship can only be placed horizontally or vertically on board
+2>in other word they can be made of the shape 1* k (1 row and k columns)
+or k *1(k rows and 1 column) where k can be of any size
+3> at least one horizontal or vertical cell separateds bewteen two batteship
+(ie there are no adjuxt battleship)
+
+
+golang 
+get a integer as input and write goroutine, channel
+to find sum of cubes
+
+exmple if input is 3
+then ouput is 36
+
+python
+dict
+stocks={
+    "apple":252.12,
+    "microsoft":198.11,
+    "intuit":672.08,
+    "databrick":112.78,
+    "yahoo":8.96,
+    "blackberry":1.2,
+}
+
+find the top 3 company and return there name and value
+
+
+python output
+def calc(x,y,/, ope='add'):
+ if ope == 'add':
+  return x+y
+ elif ope == 'sub':
+ return x-y
+ elif ope == 'mul':
+  return x*y
+  elif ope == 'divide':
+  return x/y
+else:
+    raise ValueError('invalid operation')
+
+result = calc(x=7,y=2,ope='mul')
+
+python
+can you simple class which has class method and instance method
+
+
+javascript
+const getUser = () => {
+    return new Promise(resolve => {
+        resolve(
+            [
+                {id:1,name:'Jack'},
+                {id:2,name:'John'},
+                {id:3,name:'Mike'}
+            ]
+        )
+    })
+}
+
+const getUserStatuse = () => {
+    return new Promise(resolve => {
+        resolve(
+            [
+                {id:1,isActive:true},
+                {id:2,isActive:true},
+                {id:3,isActive:false}
+            ]
+        )
+    })
+}
+
+map both of them on basis of id
+
+
+javascript
+setTimeOut(() => {
+    console.log(1)
+},0)
+
+console.log(3)
+
+Promise.resolve(4).then(console.log)
+
+new Promise((resolve,reject) => {
+    console.log(5)
+    reject(6)
+}).catch(error => {
+    console.log(error)
+})
+
+typescript
+any vs unkown
+
+angular
+directive vs component
+
+
+test case jest handle userinput and make backend call
+
+const searchInput = document.querySelector('#search-input')
+
+fromEvent(searchInput, 'keyup').pipe(
+    /* Write code here*/
+).subscribe()
+
+
+ios
+
+func divideLoot(
+    people:Int,
+    fairly:Bool) -> string{
+        var output;
+        string = "we're going to split.....\n"
+        if fairly{
+            output += "Everyone get 1/\"
+
+        }
+        return output
+    }
+    print(divideLoot(people:5, fairly))
+)
+
+sql query
+what is having and where clause
+
+const arr= [
+    {name:'Alex',age:25},
+    {name:'Bob',age:30},
+    {name:'Alex',age:25},
+]
+
+groupedBy(arr,age)
+
+output
+{
+25:[
+    {name:'Alex',age:25},
+    {name:'Alex',age:25},
+],
+30:[{name:'Bob',age:30}]
+ }
+
+
+ javascript
+ const arr = [1,4,2,10,15]
+ create function to find larget element in array
+find nth larget 
+
+
+javascript
+string is palindrome code if we have remove 1 or less char
+
+example
+//"abcbda" -> true
+//"desbacbe" -> false
+//dabcba"> true
+//"asdfghj"> false
+
+javascript 
+on the basis of output understand the function and write
+
+    input = "this is a test sentence"
+    output:[t,h,i,s,i,s,a,t,e,s,t,s,e,n,t,e,n,c,e]
+
+    input = "thiis iss a teest seentennce"
+    output:[i,s,e,e,n]
+
+
+    input = "thiiis iss a teeest seentennncce"
+    output:[i,e,n]
+
+    we have 3 component compa,b,c, we need where c is actual view component I what design where compA render insider component b
+    will render 3 time im component A use children porps
+
+
+JavaScript
+write function take an array and revere the array and return new array
+
+
+React
+we have 2 category  closet and Suitcase
+closet have few item display in terms of card
+Suitcase have few item
+
+every item have move button on click of that
+if item in closet will move to Suitcase div
+and vice versa
+
+golang
+ we need to attempt the sorta list of flight based on their price
+ from high to low
+ 20,30,50,100
+ you will implement the sortByPrice function that take in a slice of
+    type flight and return the sorted list of flight
+    in order to help you see what is going you hav been provided a very quick
+    prtint flight function which you can use to print the fligh out
+
+
+
+        javascript
+const people : Person[]= [
+    {name:'abc', age:30},
+    {name:'def', age:25},
+    {name:'pqe', age:35}
+]
+
+react
+given  react component that display a list of a 
+grocery item each wit a name cost and quantity complete the following task:
+1) implement the logic for button that increaase and decrease the quantity of each item
+2) Dipaky the total cost of all items based on their quantity and const
+3) Add a input field for the user to set their budget when total cost
+exceed the budget log the amount by which the total cost exceed the busget
+
+
+css
+make a red circle red backgroudn in center of page or div
+
+given a collection of candidate numbers (candidates) 
+and a target number (target)
+wriet a function combinationSum2 to find all unique
+    combination of candiates where choosen number
+    sum to target. Each number in candiates may only be used 
+    once in the combination
+
+    input combinationSum2([10,1,2,7,6,5], 9)
+    output [[1,2,5],[1,7],[2,6]]
+
+
+var x = 0;
+for (let i =0;i<5;i++){
+    setTimeout(() => {
+        x++;
+        console.log(x)
+
+    },1000)
+}
+console.log(x)
+
+
+let obj1 = {key:"value"};
+let obj2 = obj1
+let obj3 = obj2
+
+obj1.key = 'new Value'
+obj2 = {key: "another value"}
+
+console.log(obj1.key, obj2.key, obj3.key)
+
+
+python
+function to add 2 nuber
+
+
+python 
+check palindorm
+given sting s conating just the characters '(',')','{','}','[',']' 
+
+input is valid if
+1) open barcket must be cloase by the same type of brakcet
+2) open bracket must be closed in the correct order
+3) Every close brakcet has ca cooresponding opne bracket of the same type
+
+
+
+tableA: Device_id, device_status= connect,not conncetc,device_type= samsung , motorola
+
+SQL
+tableB: device_id, snapshot_date, record_status = 'Update','Delete',"Insert"
+
+write query to find count of record for snapshot date on basis of record status 
+
+
+
+SQL
+tableB: device_id, snapshot_date, record_status = 'Update','Delete',"Insert"
+write query to delete  2 record and keep 1
+
+
+create a single todo app using reactjs
+Same data local state management
+each todo item will have description , due date,
+status, completed/cancelled date, 
+handle form validation for required field 
+order the todo item based on due date in increasing order
+wen and item marked as completeded or cancelled move them to
+bottom of the page of todo List
+Apply appropitae styling to the page using css 
+
+React (typescrit) pool manager
+
+design pool manger app that allow users to 
+vote one of the two option and view the winner
+the app should be built using React + typescript
+App the 3 comoponnent pollmanager , vote and results
+
+vote component
+> display text of ecah option
+> procide a vote burron fro each option
+> disable vote button for each option whne the winner is declared
+
+Result component
+> display the result text based on the 
+> if no vote cast show empty
+> if same number of vote show tie 
+> if one has extr then sow leaser is leading by vote diff
+
+view winner
+> if no vote cast button disabled
+> clicking winner button 
+display resukt text "it is a tie" if same number of vote
+if one has extr then sow leaser is leading by vote diff
+    disable the view winner button 
+    disable votr button for each option
+
+poll manager
+>>display poll Question
+> manage state of the poll incduing vote and winner status
+> pass the relevent data and function to the vote and result component
+
+
+
+in vote component
+interface VoteProps{
+        options: PollOption[];
+        onVote:(optionId: number) =>void;
+        viewwinner: boolea
+    }
+
+export interface PollOption{
+        id:number
+        text:string;
+        votes:number
+    }
+
+
+export interface Poll{
+        question:string
+       options:PollOption
+    }
+
+
+
+
+python
+given two nodes on atree find the first ancestor they have in
+common Nodes have pointers to  their parent and their childern
+
+
+python
+we have a game in which consecuitve duplicates pieces of the same type
+cancel each other  out and remaining pieces slide in until no more pieces can be removed
+
+Give a board resprestn by string return the final state of the board after playing the game
+
+input = "abbba"
+output:"" ("abbba" => "aa" => "")
+
+input = "ab"
+output = "ab"
+
+golang
+package main
+
+import {
+    "log"
+    "net/http"
+}
+
+implement 
+//get /rules (list all rules)
+//post (/rules) (insert a single rule)
+
+type FirewallRue struct{
+    VMID uint64 `json:"vm_id"`
+    Direaction string `json:"direaction"`
+    Source string `json:"Source"`
+    Destination string `json:"Destination"`
+    Protcol string `json:"Protcol"`
+    Port int `json:"Port"`
+}
+
+func main(){
+    database := make(map[unint64]* FirewallRue)
+    database[1] = &FirewallRule{VMID:1}
+
+    r: http.NewServeMux()
+
+    r.HandleFunc("GET"){
+
+    }
+}
+
+s:= &http.Server{
+    Addr: ":3000",
+    Handler: r
+}
+
+
+function fn(){...}
+    // functional component
+    function form(){
+        // call fn whrn form unmount
+    }
+
+
+    output
+
+    const olObj = {
+        contant:{
+            email:"old_email"
+        }
+    }
+
+    const newObj = {
+        ...oldObj
+    }
+
+    console.log(oldObj.contact.email)
+    console.log(newObj.contact.email)
+
+
+    output
+    javascriot
+    how do you promidify th delay function ?
+        it should print 
+
+    const delay = () => setTimeOut(() => {
+        console.log('timeout')
+    })
+
+    async function main(){
+        console.log('start')
+
+        await delay;
+
+        console.log('finish')
+    }
+
+    main()
+
+    it should print start,timeout, finish and make sure it run asynchronously
+
+
+    jacascript
+    what is missing
+    what do you need to define name and age when intasniting the person class?
+
+        class Person{
+            name = "",
+            age = 0
+        }
+
+
+        const John = new Person('a',10)
+
+
+given this array of users can you implement the getActiveUserWithCat return active use with cat
+
+
+input=[
+    {name:"a",isActive:false,hasTrue:true},
+    {name:"b",isActive:true,hasTrue:true},
+    {name:"c",isActive:true,hasTrue:false},
+    {name:"d",isActive:true,hasTrue:true}
+]
+
+golang
+there are 2 golang routine one is producer
+other is consumer once it recive it will send acknolwdgement and then 
+    producer will send new mesaage
+    in case of 10 sec delay in acknolwdgement it will end bot goroutine
+
+
+output of javascript code
+
+const makeMap = () => {
+    const parks = new Map()
+    parkse.set("uinversla",{name:"USF",age:30});
+    parks.set("disney",{name:"magic",age:40})
+    parks.set("uinversla",{name:"IOA",age:50})
+
+    console.log(JSON.stringify(parks))
+}
+
+
+
+function sumArray(array:number[]){
+    let sum = 0;
+    for(let i = 1 ; i<array.length;i++){
+        sum +=array[i]
+    }
+return sum
+}
+
+
+javascript
+implement a function to find the sum of number without any loop
+    arr = [1,2,3,4,5]
+
+
+    javascript
+    "A"-1
+    2+"-2"+"2"
+    "Hello"-"World"+78
+    
+React creates simple component 
+counter for increase and decearese and dipslay ouput
+
+there is a sitting length N made only od letter 'a'
+whenever there are two identical adjust letter like 'aa' 
+yjey can be transformed into single letter that is the next 
+letter of the alpjabet.
+like 'aa' transfomeed to 'b' and 'ee' will transformed to 'f'
+and 'zz' cannot be further transfomred
+
+what is thw alpjabet larget string that can be obtained from the intial
+string?
+
+
+function soluiton (N)
+
+    example
+    N = 11 function should retirn 'dba';
+        'aaaaaaaaaaa' => 'bbbbba' => 'ccba' => 'dba'
