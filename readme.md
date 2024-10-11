@@ -1,3 +1,4 @@
+
 given a 1-indexed array of integres
 that is already sorted in non -descresing
 numbers be  numbers[index1] and numbers[index2] 
