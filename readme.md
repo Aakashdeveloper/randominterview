@@ -2946,7 +2946,6 @@ and 'zz' cannot be further transfomred
 what is thw alpjabet larget string that can be obtained from the intial
 string?
 
-
 function soluiton (N)
 
     example
