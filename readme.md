@@ -2936,18 +2936,18 @@ implement a function to find the sum of number without any loop
 React creates simple component 
 counter for increase and decearese and dipslay ouput
 
-there is a sitting length N made only od letter 'a'
-whenever there are two identical adjust letter like 'aa' 
-yjey can be transformed into single letter that is the next 
-letter of the alpjabet.
-like 'aa' transfomeed to 'b' and 'ee' will transformed to 'f'
-and 'zz' cannot be further transfomred
+There is a string length N made only of the letter 'a'
+whenever there are two identical adjusted letter like 'aa' 
+they can be transformed into a single letter that is the next 
+letter of the alphabet.
+like 'aa' transformed to 'b' and 'ee' will be transformed to 'f'
+and 'zz' cannot be further transformed
 
-what is thw alpjabet larget string that can be obtained from the intial
+what is the alphabet large string that can be obtained from the initial
 string?
 
 function soluiton (N)
 
     example
-    N = 11 function should retirn 'dba';
+    N = 11 function should return 'dba';
         'aaaaaaaaaaa' => 'bbbbba' => 'ccba' => 'dba'
